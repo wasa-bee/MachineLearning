@@ -23,6 +23,7 @@ def apply_time_sheet():
         driver.find_element_by_xpath('//*[contains(text(), "{}")]'.format(PROJECT_ID)).click()
         driver.find_element_by_xpath('//*[@id="btnAdd"]').click()
         driver.find_element_by_xpath('//*[@id="chkSels"]').click()
+        driver.implicitly_wait(5)
         driver.find_element_by_xpath('//*[@id="btnSave"]').click()
         alert = driver.switch_to.alert
         alert.accept()
